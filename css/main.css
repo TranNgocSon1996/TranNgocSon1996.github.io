@@ -5174,6 +5174,7 @@ Created using IcoMoon - icomoon.io
   padding: 0;
   margin: 0;
   border: 15px solid transparent;
+  object-fit: cover;
   z-index: 9999;
   transition: all .3s ease-out; }
 
@@ -5266,7 +5267,7 @@ Created using IcoMoon - icomoon.io
   color: #3b5998; }
 
 .cc-twitter:hover i {
-  color: #1da1f2; }
+  color: #fff; }
 
 .cc-google-plus:hover i {
   color: #dd4b39; }
