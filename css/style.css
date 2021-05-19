@@ -1109,9 +1109,14 @@ input::placeholder {
   .section-feedback {
     background: url(../images/bg-feedback.png) no-repeat 100% 100%/100%;
   }
+  .section-feature {
+    background-position: bottom center;
+    background-size: contain;
+}
   .section-footer {
-    background: url(../images/bg-footer.png) no-repeat 100% 100%/100%;
-  }
+    background-position: top right;
+    background-size: cover;
+}
   .now-order {
     text-align: right;
   }
