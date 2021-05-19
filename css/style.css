@@ -101,6 +101,7 @@ p {
 }
 .infor-image img {
   animation: 1s ease 0s normal both 1 running zoomIn;
+  width: 276px;
 }
 .buy-now {
   margin-top: -25px;
@@ -236,6 +237,9 @@ p {
 }
 .template-image {
   position: relative;
+}
+.template-image img {
+  width: 263px;
 }
 .play-boy {
   position: absolute;
@@ -389,6 +393,10 @@ p {
 }
 .feature-item img {
   margin: 25px 0 23px;
+  width: 129px;
+}
+.star img {
+  width: 47px;
 }
 .feature-title p {
   color: #8f0e54;
@@ -440,6 +448,9 @@ p {
 }
 .sale-items {
   margin-bottom: 64px;
+}
+.sale-items img{
+  width: 82px;
 }
 .sale-item {
   grid-template-columns: max-content auto;
@@ -642,10 +653,16 @@ p {
 .image-list {
   padding-left: 16px;
 }
+.image-list img{
+  width: 230px !important;
+}
 .items-image,.items-custom-image{
   display: inline-block !important;
   width: 100%;
   clear: both;
+}
+.items-custom-image img{
+  width: 160px !important;
 }
 .custom-image p {
   font-weight: 600;
@@ -701,6 +718,9 @@ p {
   top: -6%;
   left: 50%;
   transform: translateX(-50%);
+}
+.check-sale img{
+  width: 209px;
 }
 .check-detail {
   padding: 0 60px;
@@ -928,6 +948,9 @@ input::placeholder {
   padding: 0 16px;
   display: inline-flex;
 }
+.gitf-detail img {
+  width: 40px;
+}
 .gitf-1 {
   grid-template-columns: max-content 65px;
   grid-gap: 4px;
@@ -964,7 +987,7 @@ input::placeholder {
   cursor: pointer;
   position: relative;
   margin: 0 10px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 .choose-color .btn-galaxy {
   background: radial-gradient(
@@ -1062,6 +1085,9 @@ input::placeholder {
 .section-msg {
   text-align: center;
   animation: 1s ease 0s normal both 1 running bounceInUp;
+}
+.section-msg img{
+  width: 291px;
 }
 .section-msg figure {
   margin: 65px 0 45px;
