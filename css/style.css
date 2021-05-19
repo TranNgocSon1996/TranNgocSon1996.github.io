@@ -1127,7 +1127,7 @@ input::placeholder {
     background: url(../images/bg-infor.png) #dcf0ff no-repeat 100% 100%/100%;
   }
   .play-boy {
-    right: 20%;
+    right: 10%;
   }
   .section-sale {
     background: url(../images/bg-sale.png) #ffebee no-repeat 100% 100%/100%;
@@ -1145,9 +1145,6 @@ input::placeholder {
 }
   .now-order {
     text-align: right;
-  }
-  .now-order img {
-    width: auto;
   }
 }
 /*#endregion */
