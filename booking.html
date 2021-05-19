@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Booking</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <section class="body">
+        <div class="container-fuild">
+            <section class="section-time-booking">
+                <button onclick="location.href='index.html'" type="button">Trở về</button>
+                <div class="time-booking-text">
+                    <p class="text-1">Đặt mua balo</p>
+                    <p class="text-2">Khuyến mại kết thúc sau</p>
+                    <div class="booking-countdown">
+                        <div class="hours-container">
+                            <span class="hours time-block"></span><span class="hours-label time-label">g</span>
+                        </div>
+                        <p>:</p>
+                        <div class="minutes-container">
+                            <span class="minutes time-block"></span><span class="minutes-label time-label">p</span>
+                        </div>
+                        <p>:</p>
+                        <div class="seconds-container">
+                            <span class="seconds time-block"></span><span class="seconds-label time-label">s</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-form-booking">
+                <div class="choose-color-title">
+                    <p class="text-3">Chọn màu</p>
+                </div>
+                <form action="https://sheetdb.io/api/v1/nh29szpwutcbh" method="POST" id="form-buy">
+                    <div class="choose-color">
+                        <button id="btn-galaxy" class="btn-galaxy active" type="button">Galaxy</button>
+                        <button id="btn-black" class="btn-black" type="button">Black</button>
+                    </div>
+                    <div class="infor-booking-title">
+                        <p class="text-3">Thông tin đặt hàng</p>
+                    </div>
+                    <div class="input-booking">
+                        <input name="data[type]" type="hidden" id="pro-type" name="pro-type" value="Galaxy">
+                        <input name="data[time]" type="hidden" id="time" name="time" value="">
+                        <input name="data[name]" id="name" placeholder="Tên người nhận" required>
+                        <input name="data[phone]" id="phone" placeholder="Số điện thoại" required>
+                        <input name="data[address]" id="address" placeholder="Địa chỉ nhận hàng" required>
+                        <input name="data[message]" id="message" placeholder="Lời nhắn cho shop">
+                    </div>
+                    <section class="section-infor-booking">
+                        <div class="summary-order">
+                            <p class="text-4">Tóm tắt đơn hàng</p>
+                        </div>
+                        <div class="book-price mo-grid">
+                            <div class="booking-name">
+                                <p class="text-5">Balo DEGREY</p>
+                            </div>
+                            <div class="booking-price">
+                                <p class="text-6">299k/ 1 chiếc</p>
+                                <p class="text-7">*giá chưa bao gồm phí ship</p>
+                            </div>
+                        </div>
+                        <div class="gitf">
+                            <p class="text-8">Được tặng</p>
+                        </div>
+                        <div class="gitf-detail">
+                            <div class="gitf-1 mo-grid">
+                                <figure>
+                                    <img src="images/gift-1.png" alt="">
+                                </figure>
+                                <div class="gift-detail">
+                                    <p class="text-8">Giấy</p>
+                                    <p class="text-9">thơm</p>
+                                </div>
+                            </div>
+                            <div class="gitf-2 mo-grid">
+                                <figure>
+                                    <img src="images/gift-2.png" alt="">
+                                </figure>
+                                <div class="gift-detail">
+                                    <p class="text-10">Thẻ</p>
+                                    <p class="text-11">bảo hành</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="btn-buy-now section-send-order">
+                        <button id="submit" class="submit" type="submit">GỬI ĐƠN MUA</button>
+                    </section>
+                </form>
+            </section>
+        </div>
+    </section>
+</body>
+<script src="lib/jquery-3.3.1.min.js"></script>
+<script>
+    $(".btn-galaxy").click(function () {
+        $('.btn-black').removeClass('active');
+        $('.btn-galaxy').addClass('active');
+        document.getElementById("pro-type").value = "Galaxy";
+    });
+    $(".btn-black").click(function () {
+        $('.btn-galaxy').removeClass('active');
+        $('.btn-black').addClass('active');
+        document.getElementById("pro-type").value = "Black";
+    });
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    today = mm + '/' + dd + '/' + yyyy;
+    document.getElementById("time").value = today;
+    var form = document.getElementById('form-buy');
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+        fetch(form.action, {
+            method: "POST",
+            body: new FormData(document.getElementById("form-buy")),
+        }).then(
+            response => response.json()
+        ).then((html) => {
+            document.getElementById("name").value = "";
+            document.getElementById("phone").value = "";
+            document.getElementById("address").value = "";
+            document.getElementById("message").value = "";
+            window.location.href = "thankyou.html";
+        });
+    });
+</script>
+<script>
+    const countDownClock = (number = 100, format = 'seconds') => {
+
+        const d = document;
+        const hoursElement = d.querySelector('.hours');
+        const minutesElement = d.querySelector('.minutes');
+        const secondsElement = d.querySelector('.seconds');
+        let countdown;
+        convertFormat(format);
+
+
+        function convertFormat(format) {
+            switch (format) {
+                case 'seconds':
+                    return timer(number);
+                case 'minutes':
+                    return timer(number * 60);
+                case 'hours':
+                    return timer(number * 60 * 60);
+            }
+        }
+
+        function timer(seconds) {
+            const now = Date.now();
+            const then = now + seconds * 1000;
+
+            countdown = setInterval(() => {
+                const secondsLeft = Math.round((then - Date.now()) / 1000);
+
+                if (secondsLeft <= 0) {
+                    clearInterval(countdown);
+                    return;
+                };
+
+                displayTimeLeft(secondsLeft);
+
+            }, 1000);
+        }
+
+        function displayTimeLeft(seconds) {
+            hoursElement.textContent = Math.floor((seconds % 86400) / 3600);
+            minutesElement.textContent = Math.floor((seconds % 86400) % 3600 / 60);
+            secondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
+        }
+    }
+    /*
+      start countdown
+      enter number and format
+      hours, minutes or seconds
+    */
+    countDownClock(3, 'hours');
+</script>
+
+</html>

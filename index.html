@@ -1,424 +1,499 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hồ sơ cá nhân</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/aos.css?ver=1.1.0" rel="stylesheet">
-    <link href="css/bootstrap.min.css?ver=1.1.0" rel="stylesheet">
-    <link href="css/main.css?ver=1.1.0" rel="stylesheet">
-    <noscript>
-      <style type="text/css">
-        [data-aos] {
-            opacity: 1 !important;
-            transform: translate(0) scale(1) !important;
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="lib/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="lib/wowjs/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <section class="body">
+        <div class="container-fuild">
+            <section class="section-infor">
+                <div class="infor-text">
+                    <div class="infor-text-1">
+                        <p class="text-1">BALO SIÊU XINH</p>
+                        <p class="text-2">SIÊU CHẤT</p>
+                    </div>
+                    <div class="infor-text-2">
+                        <p class="text-3">Mua balo <span>DEGREY</span></p>
+                        <p class="text-4">Siêu Ưu đãi Chào Hè!</p>
+                    </div>
+                </div>
+                <div class="infor-image">
+                    <figure>
+                        <img src="images/infor-balo.png" alt="Balo">
+                    </figure>
+                </div>
+                <div class="buy-now">
+                    <div class="price">
+                        <span class="cost">
+                            <p class="only">chỉ</p>299<span class="unit">k</span>
+                        </span>
+                    </div>
+                    <div class="btn-buy-now infor-booking">
+                        <div class="btn-content">
+                            <button onclick="location.href='booking.html'" type="button">ĐẶT MUA NGAY</button>
+                            <div class="infor-point">
+                                <figure>
+                                    <img src="images/finger-point.gif" alt="Point" style="width:66px;height:66px;">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-buy">
+                        <p class="text-5">390 người đã mua</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section-template">
+                <div class="template-text">
+                    <p class="text-6">2 MẪU</p>
+                    <p class="text-7">THIẾT KẾ</p>
+                </div>
+                <div class="template-image">
+                    <figure>
+                        <img src="images/template-balo.png" alt="Balo">
+                    </figure>
+                    <div class="play-boy">
+                        <figure>
+                            <img src="images/2b46ad7f-1d1f-4c14-8978-b15a26b92a0b.gif" alt="play"
+                                style="width:74px;height:74px;">
+                        </figure>
+                    </div>
+                </div>
+            </section>
+            <section class="section-choose">
+                <div class="choose-title">
+                    <p class="text-8">Lựa chọn màu sắc</p>
+                </div>
+                <div class="nav-align-center">
+                    <ul class="nav nav-pills nav-pills-primary">
+                        <li id="li_tab1" class="nav-item select-tab" onclick="tab('tab1')" class="select-tab"><a
+                                class="nav-link nav-galaxy"></a></li>
+                        <li id="li_tab2" class="nav-item" onclick="tab('tab2')"><a class="nav-link nav-balck"></a></li>
+                    </ul>
+                </div>
+                <div id="content_tab" class="tab-content">
+                    <div id="tab1" class="tab-pane tab-galaxy">
+                        <p class="text-9">Màu Galaxy</p>
+                        <div class="items-galaxy owl-carousel">
+                            <div class="item-product">
+                                <figure>
+                                    <img src="images/choose-galaxy-1.png" alt="Balo">
+                                </figure>
+                            </div>
+                            <div class="item-product">
+                                <figure>
+                                    <img src="images/choose-galaxy-2.png" alt="Balo">
+                                </figure>
+                            </div>
+                            <div class="item-product">
+                                <figure>
+                                    <img src="images/choose-galaxy-3.png" alt="Balo">
+                                </figure>
+                            </div>
+                            <div class="item-product">
+                                <figure>
+                                    <img src="images/choose-galaxy-4.png" alt="Balo">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab2" class="tab-pane tab-black" style="display: none;">
+                        <p class="text-10">Màu Black</p>
+                        <div class="items-black owl-carousel">
+                            <div class="item-product">
+                                <figure>
+                                    <img src="images/choose-black-1.png" alt="Balo">
+                                </figure>
+                            </div>
+                            <div class="item-product">
+                                <figure>
+                                    <img src="images/choose-black-2.png" alt="Balo">
+                                </figure>
+                            </div>
+                            <div class="item-product">
+                                <figure>
+                                    <img src="images/choose-black-3.png" alt="Balo">
+                                </figure>
+                            </div>
+                            <div class="item-product">
+                                <figure>
+                                    <img src="images/choose-black-4.png" alt="Balo">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-feature">
+                <div class="feature-text">
+                    <p class="text-11">ĐẶC TÍNH</p>
+                    <p class="text-12">ƯU VIỆT</p>
+                </div>
+                <div class="features">
+                    <div class="feature-item">
+                        <figure>
+                            <img src="images/feature-1.png" alt="feature">
+                        </figure>
+                        <div class="feature-title">
+                            <p class="text-13">Thoải mái đựng đồ</p>
+                        </div>
+                        <div class="feature-detail">
+                            <p class="text-14">Kích thước balo 40 x 30 x 13 cm (dài-rộng-độ phồng)</p>
+                        </div>
+                        <div class="my-eye">
+                            <figure>
+                                <img src="images/3eyes.gif" alt="Eye" style="width:100px;height:100px;">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <figure>
+                            <img src="images/feature-2.png" alt="feature">
+                        </figure>
+                        <div class="feature-title">
+                            <p class="text-15">Chất liệu bền bỉ</p>
+                        </div>
+                        <div class="feature-detail">
+                            <p class="text-16">Vải bố dày dặn, bạn thoải mái sử dụng với sự bền bỉ từ 9-15 tháng</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <figure>
+                            <img src="images/feature-3.png" alt="feature">
+                            <figure class="star">
+                                <img src="images/feature-star.png" alt="star">
+                            </figure>
+                        </figure>
+                        <div class="feature-title">
+                            <p class="text-17">Bảo hành 1 năm miễn phí</p>
+                        </div>
+                        <div class="feature-detail">
+                            <p class="text-18">Hoàn toàn yên tâm sử dụng khi được bảo hành 1 năm miễn phí đường chỉ và
+                                dây kéo</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-sale">
+                <div class="sale-title">
+                    <p class="text-19">NGẬP TRÀN ƯU ĐÃI</p>
+                    <p class="text-20">TẶNG NGAY,</p>
+                </div>
+                <div class="sale-items">
+                    <div class="sale-item mo-grid">
+                        <figure>
+                            <img src="images/sale-item-1.png" alt="sale">
+                        </figure>
+                        <div class="sale-item-text">
+                            <p class="text-21">Tặng giấy thơm</p>
+                        </div>
+                    </div>
+                    <div class="sale-item mo-grid">
+                        <figure>
+                            <img src="images/sale-item-2.png" alt="sale">
+                        </figure>
+                        <div class="sale-item-text">
+                            <p class="text-22">Thẻ bảo hành lên đến 12 tháng</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sale-time">
+                    <div class="sale-time-title">
+                        <p class="text-23">Khuyến mại sẽ kết thúc sau</p>
+                    </div>
+                    <div class="sale-countdown">
+                        <div class="hours-container">
+                            <div class="hours time-block"></div>
+                            <div class="hours-label time-label">giờ</div>
+                        </div>
+                        <p>:</p>
+                        <div class="minutes-container">
+                            <div class="minutes time-block"></div>
+                            <div class="minutes-label time-label">phút</div>
+                        </div>
+                        <p>:</p>
+                        <div class="seconds-container">
+                            <div class="seconds time-block"></div>
+                            <div class="seconds-label time-label">giây</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sale-all-price">
+                    <div class="sale-cost">
+                        <p class="text-24">599</p><span>k</span>
+                    </div>
+                    <div class="sale-price">
+                        <p class="text-25">299</p><span>k</span>
+                    </div>
+                    <div class="sale-discount">
+                        <p class="text-26">-32%</p>
+                    </div>
+                </div>
+                <div class="btn-buy-now sale-booking">
+                    <div class="btn-content">
+                        <button onclick="location.href='booking.html'" type="button">ĐẶT MUA NGAY</button>
+                        <div class="infor-point">
+                            <figure>
+                                <img src="images/finger-point.gif" alt="Point" style="width:66px;height:66px;">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-buy">
+                    <p class="text-26">chỉ còn 21 sản phẩm có sẵn</p>
+                </div>
+            </section>
+            <section class="section-feedback">
+                <div class="feedback-title">
+                    <p class="text-27">PHẢN HỒI TỪ KHÁCH HÀNG</p>
+                </div>
+                <div class="image-list">
+                    <div class="items-image owl-carousel">
+                        <div class="item-image">
+                            <figure>
+                                <img src="images/feedback-1.png" alt="Balo">
+                            </figure>
+                        </div>
+                        <div class="item-image">
+                            <figure>
+                                <img src="images/feedback-2.png" alt="Balo">
+                            </figure>
+                        </div>
+                        <div class="item-image">
+                            <figure>
+                                <img src="images/feedback-3.png" alt="Balo">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-image">
+                    <p class="text-28">Hình ảnh từ khách hàng</p>
+                </div>
+                <div class="custom-image-list">
+                    <div class="items-custom-image owl-carousel">
+                        <div class="item-custom-image">
+                            <figure>
+                                <img src="images/custom-1.png" alt="Balo">
+                            </figure>
+                        </div>
+                        <div class="item-custom-image">
+                            <figure>
+                                <img src="images/custom-2.png" alt="Balo">
+                            </figure>
+                        </div>
+                        <div class="item-custom-image">
+                            <figure>
+                                <img src="images/custom-3.png" alt="Balo">
+                            </figure>
+                        </div>
+                        <div class="item-custom-image">
+                            <figure>
+                                <img src="images/custom-4.png" alt="Balo">
+                            </figure>
+                        </div>
+                        <div class="item-custom-image">
+                            <figure>
+                                <img src="images/custom-5.png" alt="Balo">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-check">
+                <div class="check-sale">
+                    <figure>
+                        <img src="images/check-sale.png" alt="">
+                    </figure>
+                </div>
+                <div class="btn-buy-now check-booking">
+                    <div class="btn-content">
+                        <button onclick="location.href='booking.html'" type="button">ĐẶT MUA NGAY</button>
+                        <div class="infor-point">
+                            <figure>
+                                <img src="images/finger-point.gif" alt="Point" style="width:66px;height:66px;">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="check-list">
+                    <div class="check-item">
+                        <figure>
+                            <img src="images/check-item-1.png" alt="">
+                        </figure>
+                        <div class="check-detail">
+                            <p class="text-29">Cho kiểm tra sản phẩm khi thanh toán, ưng ý mới trả tiền</p>
+                        </div>
+                    </div>
+                    <div class="check-item">
+                        <figure>
+                            <img src="images/check-item-2.png" alt="">
+                        </figure>
+                        <div class="check-detail">
+                            <p class="text-29">+ Bảo hành 1 năm + 1 đổi 1 nếu có lỗi sx trong 7 ngày</p>
+                        </div>
+                    </div>
+                    <div class="check-item">
+                        <figure>
+                            <img src="images/check-item-3.png" alt="">
+                        </figure>
+                        <div class="check-detail">
+                            <p class="text-29">Balo có kèm giấy thơm, thẻ bảo hành</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-footer">
+                <div class="footer-slogan">
+                    <p class="slogan-title">KHO DECOR</p>
+                    <p class="slogan-detail">Luôn tự tin mang đến cho khách hàng những sản phẩm cao cấp, chất lượng cùng
+                        dịch vụ hài lòng.</p>
+                </div>
+                <div class="address">
+                    <p class="address-title">ĐỊA CHỈ</p>
+                    <p class="address-detail">Số 9 Ngõ 162 Nguyễn Tuân, Thanh Xuân, Hà Nội</p>
+                </div>
+                <div class="phone">
+                    <p class="phone-title">HOTLINE</p>
+                    <p class="phone-detail">09875675454</p>
+                </div>
+            </section>
+        </div>
+        <div class="call-action mo-grid">
+            <div class="btn-call">
+                <a href="tel:09875675454">
+                    <figure>
+                        <img src="images/call-btn.png" alt="">
+                    </figure>
+                </a>
+            </div>
+            <div class="now-order">
+                <figure>
+                    <img src="images/now-order.png" alt="">
+                </figure>
+            </div>
+            <div class="btn-cart">
+                <a href="booking.html">
+                    <figure>
+                        <img src="images/cart-btn.png" alt="">
+                    </figure>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </section>
+</body>
+<script src="lib/jquery-3.3.1.min.js"></script>
+<script src="lib/owl-carousel/owl.carousel.min.js"></script>
+<script src="lib/wowjs/wow.min.js"></script>
+<script>
+    $(".btn-galaxy").click(function () {
+        $('.btn-black').removeClass('active');
+        $('.btn-galaxy').addClass('active');
+        document.getElementById("pro-type").value = "Galaxy";
+    });
+    $('.tab-black .owl-carousel').owlCarousel({
+        loop: true,
+        margin: 12,
+        slideSpeed: 3000,
+        autoWidth: true,
+        nav: false,
+        dots: false,
+    });
+    $('.tab-galaxy .owl-carousel').owlCarousel({
+        loop: true,
+        margin: 12,
+        slideSpeed: 3000,
+        autoWidth: true,
+        nav: false,
+        dots: false,
+    });
+    $('.image-list .owl-carousel').owlCarousel({
+        loop: true,
+        margin: 11,
+        slideSpeed: 3000,
+        autoWidth: true,
+        nav: false,
+        dots: false,
+    });
+    $('.custom-image-list .owl-carousel').owlCarousel({
+        loop: true,
+        margin: 8,
+        slideSpeed: 3000,
+        autoWidth: true,
+        nav: false,
+        dots: false,
+    });
+    function tab(tab) {
+        document.getElementById('tab1').style.display = 'none';
+        document.getElementById('tab2').style.display = 'none';
+        document.getElementById('li_tab1').setAttribute('class', "");
+        document.getElementById('li_tab2').setAttribute('class', "");
+        document.getElementById(tab).style.display = 'block';
+        document.getElementById('li_' + tab).setAttribute('class', 'select-tab');
+    }
+
+    new WOW().init();
+</script>
+<script>
+    const countDownClock = (number = 100, format = 'seconds') => {
+
+        const d = document;
+        const hoursElement = d.querySelector('.hours');
+        const minutesElement = d.querySelector('.minutes');
+        const secondsElement = d.querySelector('.seconds');
+        let countdown;
+        convertFormat(format);
+
+
+        function convertFormat(format) {
+            switch (format) {
+                case 'seconds':
+                    return timer(number);
+                case 'minutes':
+                    return timer(number * 60);
+                case 'hours':
+                    return timer(number * 60 * 60);
+            }
         }
-      </style>
-    </noscript>
-  </head>
-  <body id="top">
-    <header>
-      <div class="profile-page sidebar-collapse">
-        <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
-          <div class="container">
-            <div class="navbar-translate"><a class="navbar-brand" href="#" rel="tooltip">Hồ sơ cá nhân</a>
-              <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar bar1"></span><span class="navbar-toggler-bar bar2"></span><span class="navbar-toggler-bar bar3"></span></button>
-            </div>
-            <div class="collapse navbar-collapse justify-content-end" id="navigation">
-              <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">Giới thiệu</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">Kỹ năng</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#portfolio">Dự án</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Kinh nghiệm</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Liên hệ</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <div class="page-content">
-      <div>
-<div class="profile-page">
-  <div class="wrapper">
-    <div class="page-header page-header-small" filter-color="green">
-      <div class="page-header-image" data-parallax="true" style="background-image: url('images/cc-bg-1.jpg')"></div>
-      <div class="container">
-        <div class="content-center">
-          <div class="cc-profile-image"><a href="#"><img src="images/son.jpg" alt="Image"/></a></div>
-          <div class="h2 title">Trần Ngọc Sơn</div>
-          <p class="category text-white">Lập trình viên Website, Odoo</p><a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Hợp tác</a><a class="btn btn-primary" href="#" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Tải CV</a>
-        </div>
-      </div>
-      <div class="section">
-        <div class="container">
-          <div class="button-container"><a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.facebook.com/profile.php?id=100005355009139" rel="tooltip" title="Truy cập Facebook"><i class="fa fa-facebook"></i></a><a class="btn btn-default btn-round btn-lg btn-icon" href="https://github.com/TranNgocSon1996" rel="tooltip" title="Truy cập Github"><i class="fa fa-github"></i></a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="section" id="about">
-  <div class="container">
-    <div class="card" data-aos="fade-up" data-aos-offset="10">
-      <div class="row">
-        <div class="col-lg-6 col-md-12">
-          <div class="card-body">
-            <div class="h4 mt-0 title">Giới thiệu</div>
-            <p>Mình là một lập trình viên Website với 3 năm kinh nghiệm và lập trình viên Odoo</p>
-            <p>Đây là bộ hồ sơ cá nhân của mình, hi vọng có thể hợp tác cùng phát triển và cũng mong muốn tìm được một công việc phù hợp với bản thân để phát triển hơn.</p>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-12">
-          <div class="card-body">
-            <div class="h4 mt-0 title">Thông tin cơ bản</div>
-            <div class="row">
-              <div class="col-sm-4"><strong class="text-uppercase">Năm sinh:</strong></div>
-              <div class="col-sm-8">1996</div>
-            </div>
-            <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
-              <div class="col-sm-8">transon821996@gmail.com</div>
-            </div>
-            <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Điện thoại:</strong></div>
-              <div class="col-sm-8">035 7744 542</div>
-            </div>
-            <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Địa chỉ:</strong></div>
-              <div class="col-sm-8">Ngõ 52, Đường Chùa Vẽ, Phường Đông Hải 1, Quận Hải An, TP Hải Phòng</div>
-            </div>
-            <div class="row mt-3">
-              <div class="col-sm-4"><strong class="text-uppercase">Ngôn ngữ:</strong></div>
-              <div class="col-sm-8">English, French</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="section" id="skill">
-  <div class="container">
-    <div class="h4 text-center mb-4 title">Kỹ năng cá nhân</div>
-    <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">HTML</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div><span class="progress-value">80%</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">CSS, SCCS</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div><span class="progress-value">80%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">JavaScript</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div><span class="progress-value">40%</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">ASP.NET</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div><span class="progress-value">60%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">Python</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div><span class="progress-value">25%</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">Odoo</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div><span class="progress-value">25%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">SQL Server</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div><span class="progress-value">30%</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="progress-container progress-primary"><span class="progress-badge">Photoshop</span>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"></div><span class="progress-value">25%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="section" id="portfolio">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 ml-auto mr-auto">
-        <div class="h4 text-center mb-4 title">Dự án</div>
-        <div class="nav-align-center">
-          <ul class="nav nav-pills nav-pills-primary" role="tablist">
-            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#web-development" role="tablist"><i class="fa fa-globe" aria-hidden="true"></i></a></li>
-            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#module" role="tablist"><i class="fa fa-laptop" aria-hidden="true"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="tab-content gallery mt-5">
-      <div class="tab-pane active" id="web-development">
-        <div class="ml-auto mr-auto">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#web-development">
-                  <figure class="cc-effect"><img src="images/web1.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h4">Vmat</div>
-                      <p>Website</p>
-                    </figcaption>
-                  </figure></a></div>
-                </div>
-              <div class="col-md-3">
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#web-development">
-                  <figure class="cc-effect"><img src="images/web3.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h4">CICT</div>
-                      <p>Website</p>
-                    </figcaption>
-                  </figure></a></div>
-                </div>
-            <div class="col-md-3">
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#web-development">
-                  <figure class="cc-effect"><img src="images/web2.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h4">Vietnam Times Travel</div>
-                      <p>Website</p>
-                    </figcaption>
-                  </figure></a></div>
-                </div>  <div class="col-md-3">
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#web-development">
-                  <figure class="cc-effect"><img src="images/web4.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h4">Fast</div>
-                      <p>Website</p>
-                    </figcaption>
-                  </figure></a></div>
-                  <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#web-development">
-                  <figure class="cc-effect"><img src="images/web5.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h4">Megram Group</div>
-                      <p>Website</p>
-                    </figcaption>
-                  </figure></a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tab-pane" id="module" role="tabpanel">
-        <div class="ml-auto mr-auto">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
-                  <figure class="cc-effect"><img src="images/graphic-design-1.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h4">Football Management</div>
-                      <p>Odoo module</p>
-                    </figcaption>
-                  </figure></a></div>
-            </div>
-            <div class="col-md-6">
-              <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom"><a href="#graphic-design">
-                  <figure class="cc-effect"><img src="images/graphic-design-3.jpg" alt="Image"/>
-                    <figcaption>
-                      <div class="h4">To be continue</div>
-                      <p>Odoo module</p>
-                    </figcaption>
-                  </figure></a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="section" id="experience">
-  <div class="container cc-experience">
-    <div class="h4 text-center mb-4 title">Kinh nghiệm làm việc</div>
-    <div class="card">
-      <div class="row">
-        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body cc-experience-header">
-            <p>08/2017 - 08/2020</p>
-            <div class="h5">Website</div>
-          </div>
-        </div>
-        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body">
-            <div class="h5">Lập trình viên Website</div>
-            <p>Tham gia tư vấn, xây dựng và duy trì các website cho khách hàng. Có thể tùy biến với các giao diện do đội thiết kế đề ra.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="row">
-        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body cc-experience-header">
-            <p>09/2020 - Hiện tại</p>
-            <div class="h5">Odoo</div>
-          </div>
-        </div>
-        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body">
-            <div class="h5">Lập trình viên Odoo</div>
-            <p>Tham gia tư vấn, xây dựng các module đáp ứng đầy đủ các chức năng cho doanh nghiệp và các khách hàng</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="section">
-  <div class="container cc-education">
-    <div class="h4 text-center mb-4 title">Học vấn</div>
-    <div class="card">
-      <div class="row">
-        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body cc-education-header">
-            <p>2011 - 2014</p>
-            <div class="h5">Khối A</div>
-          </div>
-        </div>
-        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body">
-            <div class="h5">Trường THPT Vĩnh Bảo</div>
-            <p class="category">Khối A</p>
-            <p>Tốt nghiệp loại khá</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="row">
-        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body cc-education-header">
-            <p>2014 - 2020</p>
-            <div class="h5">Công nghệ thông tin</div>
-          </div>
-        </div>
-        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body">
-            <div class="h5">Trường đại học Bách khoa Hà Nội</div>
-            <p class="category">Hệ thống thông tin</p>
-            <p>Tốt nghiệp loại Khá</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="section" id="contact">
-  <div class="cc-contact-information" style="background-image: url('images/staticmap.png')">
-    <div class="container">
-      <div class="cc-contact">
-        <div class="row">
-          <div class="col-md-9">
-            <div class="card mb-0" data-aos="zoom-in">
-              <div class="h4 text-center title">Liên hệ với tôi</div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="card-body">
-                    <form action="https://formspree.io/transon821996@gmail.com" method="POST">
-                      <div class="p pb-3"><strong>Hãy cứ liên lạc với tôi tự nhiên</strong></div>
-                      <div class="row mb-3">
-                        <div class="col">
-                          <div class="input-group"><span class="input-group-addon"><i class="fa fa-user-circle"></i></span>
-                            <input class="form-control" type="text" name="name" placeholder="Tên" required="required"/>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row mb-3">
-                        <div class="col">
-                          <div class="input-group"><span class="input-group-addon"><i class="fa fa-file-text"></i></span>
-                            <input class="form-control" type="text" name="Subject" placeholder="Chủ đề" required="required"/>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row mb-3">
-                        <div class="col">
-                          <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                            <input class="form-control" type="email" name="_replyto" placeholder="Email" required="required"/>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row mb-3">
-                        <div class="col">
-                          <div class="form-group">
-                            <textarea class="form-control" name="message" placeholder="Lời nhắn của bạn" required="required"></textarea>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <button class="btn btn-primary" type="submit">Gửi</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="card-body">
-                    <p class="mb-0"><strong>Địa chỉ </strong></p>
-                    <p class="pb-2">Ngõ 52, Đường Chùa Vẽ, Phường Đông Hải 1, Quận Hải An, TP Hải Phòng</p>
-                    <p class="mb-0"><strong>Điện thoại</strong></p>
-                    <p class="pb-2">035 7744 542</p>
-                    <p class="mb-0"><strong>Email</strong></p>
-                    <p>transon821996@gmail.com</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div></div>
-    </div>
-    <footer class="footer">
-      <div class="container text-center"><a class="cc-facebook btn btn-link" href="https://www.facebook.com/profile.php?id=100005355009139"><i class="fa fa-facebook fa-2x " aria-hidden="true"></i></a><a class="cc-twitter btn btn-link " href="https://github.com/TranNgocSon1996"><i class="fa fa-github fa-2x " aria-hidden="true"></i></a></div>
-      <div class="h4 title text-center">Trần Ngọc Sơn</div>
-      <div class="text-center text-muted">
-        <p>&copy; Hồ sơ cá nhân.</p>
-      </div>
-    </footer>
-    <script src="js/core/jquery.3.2.1.min.js?ver=1.1.0"></script>
-    <script src="js/core/popper.min.js?ver=1.1.0"></script>
-    <script src="js/core/bootstrap.min.js?ver=1.1.0"></script>
-    <script src="js/now-ui-kit.js?ver=1.1.0"></script>
-    <script src="js/aos.js?ver=1.1.0"></script>
-    <script src="scripts/main.js?ver=1.1.0"></script>
-  </body>
+
+        function timer(seconds) {
+            const now = Date.now();
+            const then = now + seconds * 1000;
+
+            countdown = setInterval(() => {
+                const secondsLeft = Math.round((then - Date.now()) / 1000);
+
+                if (secondsLeft <= 0) {
+                    clearInterval(countdown);
+                    return;
+                };
+
+                displayTimeLeft(secondsLeft);
+
+            }, 1000);
+        }
+
+        function displayTimeLeft(seconds) {
+            hoursElement.textContent = Math.floor((seconds % 86400) / 3600);
+            minutesElement.textContent = Math.floor((seconds % 86400) % 3600 / 60);
+            secondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
+        }
+    }
+    /*
+      start countdown
+      enter number and format
+      hours, minutes or seconds
+    */
+    countDownClock(3, 'hours');
+</script>
+
 </html>
