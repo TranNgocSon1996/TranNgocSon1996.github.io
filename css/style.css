@@ -66,10 +66,9 @@ figure {
 p {
   margin: 0;
 }
-.owl-carousel
-{
-    -ms-touch-action: pan-y;
-    touch-action: pan-y;
+.owl-carousel {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
 }
 /*#endregion */
 
@@ -122,7 +121,7 @@ p {
   display: inline-block;
 }
 .buy-now .price .only {
-  font-family: "AvertaRegular";
+  font-family: "AvertaBold";
   font-weight: 700;
   font-size: 12px;
   color: #013371;
@@ -190,7 +189,7 @@ p {
 .user-buy p {
   font-size: 14px;
   color: #8f0e54;
-  font-family: "AvertaRegular";
+  font-family: "AvertaBold";
   font-weight: 700;
 }
 /*#endregion */
@@ -406,7 +405,7 @@ p {
 .feature-title p {
   color: #8f0e54;
   font-size: 22px;
-  font-family: "AvertaRegular";
+  font-family: "AvertaBold";
   font-weight: 700;
   margin-bottom: 16px;
 }
@@ -454,7 +453,7 @@ p {
 .sale-items {
   margin-bottom: 64px;
 }
-.sale-items img{
+.sale-items img {
   width: 82px;
 }
 .sale-item {
@@ -508,7 +507,7 @@ p {
   width: 75%;
 }
 .sale-item-text p {
-  font-family: "AvertaRegular";
+  font-family: "AvertaBold";
   font-weight: 800;
   font-size: 16px;
   color: #fff;
@@ -658,15 +657,16 @@ p {
 .image-list {
   padding-left: 16px;
 }
-.image-list img{
+.image-list img {
   width: 230px !important;
 }
-.items-image,.items-custom-image{
+.items-image,
+.items-custom-image {
   display: inline-block !important;
   width: 100%;
   clear: both;
 }
-.items-custom-image img{
+.items-custom-image img {
   width: 160px !important;
 }
 .custom-image p {
@@ -724,7 +724,7 @@ p {
   left: 50%;
   transform: translateX(-50%);
 }
-.check-sale img{
+.check-sale img {
   width: 209px;
 }
 .check-detail {
@@ -793,7 +793,8 @@ p {
   z-index: 1;
 }
 .now-order img {
-  width: 226px;
+  width: 210px;
+  padding-top: 5px;
 }
 /*#endregion */
 
@@ -809,7 +810,7 @@ p {
   position: absolute;
   top: 28px;
   cursor: pointer;
-  font-family: "AvertaRegular";
+  font-family: "AvertaBold";
   background: url(../images/back.png) #ccd6e3 no-repeat 10px center;
 }
 .section-time-booking button:after {
@@ -823,7 +824,7 @@ p {
   position: absolute;
   top: 28px;
   cursor: pointer;
-  font-family: "AvertaRegular";
+  font-family: "AvertaBold";
 }
 .section-time-booking {
   padding: 0 12px;
@@ -834,18 +835,19 @@ p {
   padding-top: 30px;
 }
 .time-booking-text .text-1 {
+  font-family: "AvertaBold";
   font-weight: 700;
   font-size: 18px;
   color: #191919;
   margin-bottom: 5px;
 }
 .time-booking-text .text-2 {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 12px;
   color: #8f0e54;
 }
 .choose-color-title p {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   color: #191919;
 }
@@ -871,25 +873,29 @@ p {
   padding: 16px;
   font-size: 16px;
   font-weight: 400;
-  color: rgba(25, 25, 25, 0.5);
+  color: #191919;
   margin: 0 20px;
   margin-top: 24px;
+  font-family: "AvertaRegular";
 }
 input::-webkit-input-placeholder {
   /* Edge */
   font-family: "AvertaRegular";
+  color: rgba(25, 25, 25, 0.5);
 }
 
 input:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   font-family: "AvertaRegular";
+  color: rgba(25, 25, 25, 0.5);
 }
 
 input::placeholder {
   font-family: "AvertaRegular";
+  color: rgba(25, 25, 25, 0.5);
 }
 .infor-booking-title p {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   color: #191919;
 }
@@ -908,7 +914,7 @@ input::placeholder {
   margin-top: 40px;
 }
 .summary-order p {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   color: #191919;
 }
@@ -934,6 +940,7 @@ input::placeholder {
   text-align: right;
 }
 .booking-price .text-7 {
+  font-family: "AvertaBold";
   font-weight: 700;
   font-size: 12px;
   text-align: right;
@@ -977,9 +984,17 @@ input::placeholder {
 }
 .section-send-order {
   position: fixed;
-  bottom: 30px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 29.72%
+  );
 }
 .choose-color button {
   border-radius: 16px;
@@ -987,7 +1002,7 @@ input::placeholder {
   height: 52px;
   font-weight: 700;
   font-size: 14px;
-  font-family: "AvertaRegular";
+  font-family: "AvertaBold";
   border: none;
   cursor: pointer;
   position: relative;
@@ -1091,7 +1106,7 @@ input::placeholder {
   text-align: center;
   animation: 1s ease 0s normal both 1 running bounceInUp;
 }
-.section-msg img{
+.section-msg img {
   width: 291px;
 }
 .section-msg figure {
@@ -1103,13 +1118,14 @@ input::placeholder {
   color: #013371;
 }
 .section-msg .text-2 {
-  font-style: normal;
+  font-family: "AvertaBold";
   font-weight: 700;
   font-size: 14px;
   color: #191919;
   padding: 0 86px;
 }
 .back-home {
+  font-family: "AvertaBold";
   font-weight: 700;
   font-size: 14px;
   color: #8f0e54;
@@ -1127,7 +1143,7 @@ input::placeholder {
 /*#endregion */
 
 /* #region RESPONSIVE*/
-@media screen and (min-width: 376px) and (max-width: 767px) {
+@media screen and (min-width: 376px) and (max-width: 480px) {
   .section-infor {
     background: url(../images/bg-infor.png) #dcf0ff no-repeat 100% 100%/100%;
   }
@@ -1143,13 +1159,25 @@ input::placeholder {
   .section-feature {
     background-position: bottom center;
     background-size: contain;
-}
+  }
   .section-footer {
     background-position: top right;
     background-size: cover;
-}
+  }
   .now-order {
     text-align: right;
+  }
+}
+@media screen and (min-width: 481px) {
+  .container-fuild {
+    max-width: 375px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .call-action {
+    width: 375px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 /*#endregion */
