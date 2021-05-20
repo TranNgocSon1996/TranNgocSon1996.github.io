@@ -66,6 +66,11 @@ figure {
 p {
   margin: 0;
 }
+.owl-carousel
+{
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+}
 /*#endregion */
 
 /* #region INFOR*/
@@ -517,7 +522,7 @@ p {
   font-size: 22px;
   color: #ffe587;
 }
-.sale-cost p {
+.sale-cost .text-24 {
   font-size: 30px;
   text-align: center;
   text-decoration-line: line-through;
@@ -529,7 +534,7 @@ p {
   text-decoration-line: line-through;
   color: #013371;
 }
-.sale-price p {
+.sale-price .text-25 {
   font-size: 30px;
   text-align: center;
   color: #ffffff;
