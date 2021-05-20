@@ -375,7 +375,13 @@
                 </a>
             </div>
             <div class="now-order">
-                <figure>
+                <figure class="order order-1 msg-active">
+                    <img src="images/now-order.png" alt="">
+                </figure>
+                <figure class="order order-2">
+                    <img src="images/now-order.png" alt="">
+                </figure>
+                <figure class="order order-3">
                     <img src="images/now-order.png" alt="">
                 </figure>
             </div>
@@ -440,7 +446,18 @@
         document.getElementById(tab).style.display = 'block';
         document.getElementById('li_' + tab).setAttribute('class', 'select-tab');
     }
-
+    setInterval(function () {
+        const container = document.querySelector('.now-order');
+        const active = document.querySelector('.msg-active');
+        let next = active.nextElementSibling;
+        active.classList.remove('msg-active');
+        if (!next) {
+            first = container.firstElementChild;
+            first.classList.add('msg-active');
+        }else{
+            next.classList.add('msg-active');
+        }
+    }, 3000);
     new WOW().init();
 </script>
 <script>
