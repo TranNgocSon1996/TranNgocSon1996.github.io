@@ -800,7 +800,7 @@ p {
   padding-top: 5px;
   display: none;
   transition: all 0.1s ease-in-out;
-  animation: 1s ease 0s normal both 1 running zoomIn ;
+  animation: 1s ease 0s normal both 1 running zoomIn;
 }
 .now-order figure.msg-active img {
   display: block;
@@ -838,6 +838,7 @@ p {
 .section-time-booking {
   padding: 0 12px;
   position: relative;
+  background: #fff;
 }
 .time-booking-text {
   text-align: center;
@@ -861,7 +862,8 @@ p {
   color: #191919;
 }
 .section-form-booking {
-  margin-top: 30px;
+  padding-top: 30px;
+  background: #fff;
 }
 .choose-color-title {
   margin-bottom: 24px;
@@ -1114,12 +1116,13 @@ input::placeholder {
 .section-msg {
   text-align: center;
   animation: 1s ease 0s normal both 1 running bounceInUp;
+  background: #fff;
 }
 .section-msg img {
   width: 291px;
 }
 .section-msg figure {
-  margin: 65px 0 45px;
+  padding: 65px 0 45px;
 }
 .section-msg .text-1 {
   font-family: "Bungee";
@@ -1134,8 +1137,10 @@ input::placeholder {
   padding: 0 86px;
 }
 .section-share {
-  margin: 120px 0 30px;
+  padding: 120px 0 30px;
   text-align: center;
+  background: #fff;
+  margin: 0;
 }
 
 /*#endregion */
@@ -1171,11 +1176,16 @@ input::placeholder {
     max-width: 375px;
     margin-right: auto;
     margin-left: auto;
+    height: 100vh;
+    background: #fff;
   }
   .call-action {
     width: 375px;
     left: 50%;
     transform: translateX(-50%);
+  }
+  .section-send-order {
+    width: 375px;
   }
 }
 /*#endregion */
