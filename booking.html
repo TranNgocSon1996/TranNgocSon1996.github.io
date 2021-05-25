@@ -38,9 +38,10 @@
                     <p class="text-3">Chọn màu</p>
                 </div>
                 <form action="https://sheetdb.io/api/v1/nh29szpwutcbh" method="POST" id="form-buy">
-                    <div class="choose-color">
+                    <div class="choose-color mo-grid">
                         <button id="btn-galaxy" class="btn-galaxy active" type="button">Galaxy</button>
                         <button id="btn-black" class="btn-black" type="button">Black</button>
+                        <button id="btn-degrey" class="btn-degrey" type="button">Chữ Degrey</button>
                     </div>
                     <div class="infor-booking-title">
                         <p class="text-3">Thông tin đặt hàng</p>
@@ -102,13 +103,21 @@
 <script>
     $(".btn-galaxy").click(function () {
         $('.btn-black').removeClass('active');
+        $('.btn-degrey').removeClass('active');
         $('.btn-galaxy').addClass('active');
         document.getElementById("pro-type").value = "Galaxy";
     });
     $(".btn-black").click(function () {
         $('.btn-galaxy').removeClass('active');
+        $('.btn-degrey').removeClass('active');
         $('.btn-black').addClass('active');
         document.getElementById("pro-type").value = "Black";
+    });
+    $(".btn-degrey").click(function () {
+        $('.btn-galaxy').removeClass('active');
+        $('.btn-black').removeClass('active');
+        $('.btn-degrey').addClass('active');
+        document.getElementById("pro-type").value = "Chữ Degrey";
     });
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
