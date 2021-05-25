@@ -332,6 +332,17 @@ p {
   text-shadow: 2px 1px 1px #90aaf4;
   padding: 0 19px 30px 0;
 }
+.tab-content .tab-pane p.text-10 {
+  color: #494949;
+  text-shadow: none;
+}
+.tab-content .tab-pane p.text-30 {
+  color: #F35DBD;
+  text-shadow: none;
+}
+.tab-content .tab-pane p.text-30 span{
+  color: #5c6bed;
+}
 .items-galaxy,
 .items-black {
   display: inline-block !important;
