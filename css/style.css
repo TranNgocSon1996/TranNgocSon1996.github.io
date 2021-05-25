@@ -289,10 +289,19 @@ p {
   transition: width 0.3s, height 0.3s;
   cursor: pointer;
 }
+.nav-pills-primary .nav-link.nav-degrey {
+  background: url(../images/logo-degrey.png) #fff no-repeat 2px center;
+  background-size: 17px;
+}
 .nav-pills-primary .select-tab .nav-link {
   width: 34px;
   height: 34px;
   margin-top: -6px;
+}
+.nav-pills-primary .select-tab .nav-link.nav-degrey {
+  background: url(../images/logo-degrey.png) #fff no-repeat 6px center;
+  background-size: 20px;
+  border: 2px solid #64CBEC;
 }
 .nav-pills-primary .nav-link.nav-galaxy {
   background: radial-gradient(
@@ -873,6 +882,7 @@ p {
   padding: 0 0 24px;
   border-bottom: 4px solid rgba(196, 196, 196, 0.1);
   text-align: center;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 #form-buy input {
   width: 100%;
@@ -1009,7 +1019,7 @@ input::placeholder {
 }
 .choose-color button {
   border-radius: 16px;
-  width: 142px;
+  width: 108px;
   height: 52px;
   font-weight: 700;
   font-size: 14px;
@@ -1017,8 +1027,10 @@ input::placeholder {
   border: none;
   cursor: pointer;
   position: relative;
-  margin: 0 10px;
+  margin: 0 4px;
   transition: all 0.1s ease-in-out;
+  text-align: left;
+  padding: 0 15px 0 42px;
 }
 .choose-color .btn-galaxy {
   background: radial-gradient(
@@ -1060,7 +1072,7 @@ input::placeholder {
 }
 .choose-color .btn-black {
   background: rgba(1, 51, 113, 0.1);
-  color: #191919;
+  color: rgba(25, 25, 25, 0.2);
 }
 .choose-color .btn-black.active {
   background: #494949;
@@ -1080,8 +1092,32 @@ input::placeholder {
   top: 50%;
   transform: translateY(-50%);
 }
+.choose-color .btn-degrey {
+  background: rgba(247, 120, 202, 0.1);
+  color: rgba(247, 120, 202, 0.5);
+}
+.choose-color .btn-degrey.active {
+  background: #F370C4;
+  border: 3px solid #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+.choose-color .btn-degrey:after {
+  position: absolute;
+  content: "";
+  width: 23px;
+  height: 23px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url(../images/logo-degrey.png) #fff no-repeat 2px center;
+  background-size: 13px;
+  border: 3px solid #64CBEC;
+}
 .choose-color .btn-galaxy:before,
-.choose-color .btn-black:before {
+.choose-color .btn-black:before,.choose-color .btn-degrey:before {
   position: absolute;
   content: "";
   width: 0;
@@ -1091,7 +1127,7 @@ input::placeholder {
   background: url(../images/checkmark-circle.png) no-repeat center;
 }
 .choose-color .btn-galaxy.active:before,
-.choose-color .btn-black.active:before {
+.choose-color .btn-black.active:before,.choose-color .btn-degrey.active:before {
   width: 24px;
   height: 24px;
 }
