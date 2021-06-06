@@ -309,7 +309,7 @@ p {
 .nav-pills-primary .select-tab .nav-link.nav-degrey {
   background: url(../images/logo-degrey.png) #fff no-repeat 6px center;
   background-size: 20px;
-  border: 2px solid #64CBEC;
+  border: 2px solid #64cbec;
 }
 .nav-pills-primary .nav-link.nav-galaxy {
   background: radial-gradient(
@@ -338,10 +338,10 @@ p {
   text-shadow: none;
 }
 .tab-content .tab-pane p.text-30 {
-  color: #F35DBD;
+  color: #f35dbd;
   text-shadow: none;
 }
-.tab-content .tab-pane p.text-30 span{
+.tab-content .tab-pane p.text-30 span {
   color: #5c6bed;
 }
 .items-galaxy,
@@ -349,6 +349,9 @@ p {
   display: inline-block !important;
   width: 100%;
   clear: both;
+}
+.item-product a {
+  display: block !important;
 }
 .item-product img {
   width: 200px !important;
@@ -696,6 +699,9 @@ p {
   width: 100%;
   clear: both;
 }
+.items-custom-image a {
+  display: block !important;
+}
 .items-custom-image img {
   width: 160px !important;
 }
@@ -772,7 +778,7 @@ p {
 .check-item {
   padding-bottom: 40px;
 }
-.check-item img{
+.check-item img {
   width: 48px;
 }
 /*#endregion */
@@ -910,8 +916,7 @@ p {
   padding: 0 20px;
 }
 .choose-color {
-  padding: 0 0 24px;
-  border-bottom: 4px solid rgba(196, 196, 196, 0.1);
+  padding-bottom: 40px;
   text-align: center;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -1074,7 +1079,8 @@ input::placeholder {
   );
   color: #ffffff;
 }
-.choose-color .btn-galaxy.active {
+.choose-color .btn-galaxy.active,
+.choose-color .select-tab .btn-galaxy {
   background: radial-gradient(
     203.4% 128.66% at 76.06% 0%,
     #62ffd9 0%,
@@ -1107,7 +1113,8 @@ input::placeholder {
   background: rgba(1, 51, 113, 0.1);
   color: rgba(25, 25, 25, 0.2);
 }
-.choose-color .btn-black.active {
+.choose-color .btn-black.active,
+.choose-color .select-tab .btn-black {
   background: #494949;
   border: 3px solid #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
@@ -1129,8 +1136,9 @@ input::placeholder {
   background: rgba(247, 120, 202, 0.1);
   color: rgba(247, 120, 202, 0.5);
 }
-.choose-color .btn-degrey.active {
-  background: #F370C4;
+.choose-color .btn-degrey.active,
+.choose-color .select-tab .btn-degrey {
+  background: #f370c4;
   border: 3px solid #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   color: #fff;
@@ -1147,10 +1155,11 @@ input::placeholder {
   transform: translateY(-50%);
   background: url(../images/logo-degrey.png) #fff no-repeat 2px center;
   background-size: 13px;
-  border: 3px solid #64CBEC;
+  border: 3px solid #64cbec;
 }
 .choose-color .btn-galaxy:before,
-.choose-color .btn-black:before,.choose-color .btn-degrey:before {
+.choose-color .btn-black:before,
+.choose-color .btn-degrey:before {
   position: absolute;
   content: "";
   width: 0;
@@ -1160,11 +1169,16 @@ input::placeholder {
   background: url(../images/checkmark-circle.png) no-repeat center;
 }
 .choose-color .btn-galaxy.active:before,
-.choose-color .btn-black.active:before,.choose-color .btn-degrey.active:before {
+.choose-color .select-tab .btn-galaxy:before,
+.choose-color .btn-black.active:before,
+.choose-color .select-tab .btn-black:before,
+.choose-color .btn-degrey.active:before,
+.choose-color .select-tab .btn-degrey:before {
   width: 24px;
   height: 24px;
 }
-.choose-color .btn-black.active:after {
+.choose-color .btn-black.active:after,
+.choose-color .select-tab .btn-black:after {
   border: 1px solid #fff;
 }
 .booking-countdown {
@@ -1178,8 +1192,50 @@ input::placeholder {
 .booking-countdown p {
   margin: 0 5px;
 }
-.btn-call img,.btn-cart img {
+.btn-call img,
+.btn-cart img {
   width: 80px;
+}
+
+.number {
+  grid-template-columns: 1fr 1fr;
+  padding: 0 20px 24px 20px;
+  border-bottom: 4px solid rgba(196, 196, 196, 0.1);
+}
+.number .number-text {
+  font-family: AvertaRegular;
+  font-size: 14px;
+  color: #191919;
+}
+.number .number-text .text-12 {
+  font-family: "AvertaBold";
+  font-weight: 700;
+  font-size: 18px;
+  color: #191919;
+  padding-bottom: 10px;
+}
+.number-button a {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #237df3;
+  text-align: center;
+  color: #fff;
+  font-family: "AvertaBold";
+  font-weight: 700;
+  cursor: pointer;
+}
+.number-button .number-balo {
+  padding: 0px 32px;
+  display: inline-block;
+}
+.number-button {
+  text-align: center;
+  padding-top: 20px;
+}
+.number-button .btn-minus {
+  background: #bdd8fb;
 }
 /*#endregion */
 
@@ -1215,7 +1271,25 @@ input::placeholder {
   background: #fff;
   margin: 0;
 }
+.fancybox-thumbs {
+  top: auto !important;
+  width: auto !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 95px !important;
+  padding: 10px 10px 5px 10px !important;
+  box-sizing: border-box !important;
+  background: rgba(0, 0, 0, 0.3) !important;
+}
 
+.fancybox-show-thumbs .fancybox-inner {
+  right: 0 !important;
+  bottom: 95px !important;
+}
+.fancybox-content img {
+  width: 100% !important;
+}
 /*#endregion */
 
 /* #region RESPONSIVE*/
