@@ -79,7 +79,7 @@ p {
 
 /* #region INFOR*/
 .section-infor {
-  background: url(../images/bg-infor.png) #dcf0ff no-repeat center;
+  background: url(../images/bg-infor.png) #dcf0ff no-repeat top center;
   text-align: center;
 }
 .infor-text {
@@ -277,9 +277,10 @@ p {
   font-family: "AvertaBold";
   font-weight: 600;
 }
-.nav-pills-primary {
+.nav-pills-primary.choose-color {
   padding: 0;
   display: inline-flex;
+  border: 0;
   text-align: center;
   margin: 25px 0;
 }

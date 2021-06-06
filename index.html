@@ -73,11 +73,10 @@
                     <p class="text-8">Lựa chọn màu sắc</p>
                 </div>
                 <div class="nav-align-center">
-                    <ul class="nav nav-pills nav-pills-primary">
-                        <li id="li_tab1" class="nav-item select-tab" onclick="tab('tab1')" class="select-tab"><a
-                                class="nav-link nav-galaxy"></a></li>
-                        <li id="li_tab2" class="nav-item" onclick="tab('tab2')"><a class="nav-link nav-balck"></a></li>
-                        <li id="li_tab3" class="nav-item" onclick="tab('tab3')"><a class="nav-link nav-degrey"></a></li>
+                    <ul class="nav nav-pills nav-pills-primary choose-color">
+                        <li id="li_tab1" class="nav-item select-tab" onclick="tab('tab1')" class="select-tab"><button id="btn-galaxy btn-tab1" class="btn-galaxy active" type="button">Galaxy</button></li>
+                        <li id="li_tab2" class="nav-item" onclick="tab('tab2')"><button id="btn-black btn-tab2" class="btn-black" type="button">Black</button></li>
+                        <li id="li_tab3" class="nav-item" onclick="tab('tab3')"><button id="btn-degrey btn-tab3" class="btn-degrey" type="button">Degrey Letter</button></li>
                     </ul>
                 </div>
                 <div id="content_tab" class="tab-content">
@@ -187,7 +186,7 @@
                         </div>
                     </div>
                     <div id="tab3" class="tab-pane tab-degrey" style="display: none;">
-                        <p class="text-30">Họa tiết chữ <span>Degrey</span></p>
+                        <p class="text-30"><span>Degrey</span> Letter</p>
                         <div class="items-degrey owl-carousel">
                             <div class="item-product">
                                 <figure>
@@ -483,17 +482,17 @@
             </section>
             <section class="section-footer">
                 <div class="footer-slogan">
-                    <p class="slogan-title">KHO DECOR</p>
+                    <p class="slogan-title">BACKPACK STORE</p>
                     <p class="slogan-detail">Luôn tự tin mang đến cho khách hàng những sản phẩm cao cấp, chất lượng cùng
                         dịch vụ hài lòng.</p>
                 </div>
                 <div class="address">
                     <p class="address-title">ĐỊA CHỈ</p>
-                    <p class="address-detail">Số 9 Ngõ 162 Nguyễn Tuân, Thanh Xuân, Hà Nội</p>
+                    <p class="address-detail">Số 3, Lê Quý Đôn, Phú Nhuận, HCM</p>
                 </div>
                 <div class="phone">
                     <p class="phone-title">HOTLINE</p>
-                    <p class="phone-detail">09875675454</p>
+                    <p class="phone-detail">0936.36.2966</p>
                 </div>
             </section>
         </div>
@@ -585,8 +584,12 @@
         document.getElementById('li_tab1').setAttribute('class', "");
         document.getElementById('li_tab2').setAttribute('class', "");
         document.getElementById('li_tab3').setAttribute('class', "");
+        $('.btn-tab1').removeClass('active');
+        $('.btn-tab2').removeClass('active');
+        $('.btn-tab3').removeClass('active');
         document.getElementById(tab).style.display = 'block';
         document.getElementById('li_' + tab).setAttribute('class', 'select-tab');
+        $('.btn-'+tab).addClass('active');
     }
     setInterval(function () {
         const container = document.querySelector('.now-order');
