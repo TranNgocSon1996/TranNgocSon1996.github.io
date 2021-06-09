@@ -75,6 +75,24 @@ p {
   -ms-touch-action: pan-y;
   touch-action: pan-y;
 }
+.owl-nav .fa {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.9;
+    color: #fff;
+}
+.owl-nav .owl-prev .fa {
+    left: 0;
+}
+.owl-nav .owl-next .fa {
+    right: 19px;
+}
 /*#endregion */
 
 /* #region INFOR*/
