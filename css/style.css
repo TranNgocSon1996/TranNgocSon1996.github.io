@@ -75,23 +75,33 @@ p {
   -ms-touch-action: pan-y;
   touch-action: pan-y;
 }
-.owl-nav .fa {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 32px;
-    height: 32px;
-    background: rgba(0,0,0,0.5);
-    border-radius: 50%;
-    text-align: center;
-    line-height: 1.9;
-    color: #fff;
+.owl-nav .fa,
+.slider-controls .fa {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.9;
+  color: #fff;
+  z-index: 10;
 }
-.owl-nav .owl-prev .fa {
-    left: 0;
+.owl-nav .owl-prev .fa,
+.slider-controls .slider-left .fa,
+.slider-controls .slider-left-1 .fa,
+.slider-controls .slider-left-2 .fa,
+.slider-controls .slider-left-3 .fa {
+  left: 0;
 }
-.owl-nav .owl-next .fa {
-    right: 0;
+.owl-nav .owl-next .fa,
+.slider-controls .slider-right .fa,
+.slider-controls .slider-right-1 .fa,
+.slider-controls .slider-right-2 .fa,
+.slider-controls .slider-right-3 .fa {
+  right: 0;
 }
 .owl-dots {
   position: absolute;
@@ -298,8 +308,9 @@ p {
 
 /* #region CHOOSE*/
 .section-choose {
-  text-align: center;
-  background: #dcf0ff;
+    text-align: center;
+    background: #dcf0ff;
+    padding-bottom: 45px;
 }
 .choose-title {
   display: inline-block;
@@ -359,7 +370,7 @@ p {
   background: #494949;
 }
 .tab-content .tab-pane {
-  padding: 0 0 0 19px;
+  padding: 0 16px;
 }
 .tab-content .tab-pane p {
   font-size: 22px;
@@ -367,7 +378,7 @@ p {
   font-family: "AvertaBold";
   font-weight: 700;
   text-shadow: 2px 1px 1px #90aaf4;
-  padding: 0 19px 30px 0;
+  padding: 0 0 30px 0;
 }
 .tab-content .tab-pane p.text-10 {
   color: #494949;
@@ -380,8 +391,16 @@ p {
 .tab-content .tab-pane p.text-30 span {
   color: #5c6bed;
 }
+.items-galaxy-all,
+.items-black-all,
+.items-degrey-all,
+.custom-image-list {
+  position: relative;
+  padding-bottom: 16px;
+}
 .items-galaxy,
-.items-black {
+.items-black,
+.items-degrey{
   display: inline-block !important;
   width: 100%;
   clear: both;
@@ -389,9 +408,24 @@ p {
 .item-product a {
   display: block !important;
 }
+.thumbnail-items-galaxy .active.center .item-product img,
+.thumbnail-items-black .active.center .item-product img,
+.thumbnail-items-degrey .active.center .item-product img,
+.thumbnail-items-custom .active.center .item-custom-image img {
+  border: 2px solid #f778ca;
+}
+.thumbnail-items-galaxy .item-product img,
+.thumbnail-items-black .item-product img,
+.thumbnail-items-degrey .item-product img,
+.thumbnail-items-custom .item-custom-image img {
+  height: 68px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #fff;
+}
 .item-product img {
-  width: 200px !important;
-  height: 200px;
+  height: 350px;
+  object-fit: cover;
 }
 .disabled {
   display: none;
@@ -690,7 +724,7 @@ p {
 
 /* #region FEEDBACK*/
 .section-feedback {
-  padding: 48px 0 100px;
+  padding: 48px 0 155px;
   background: url(../images/bg-feedback.png) #fff no-repeat bottom center;
   text-align: center;
   position: relative;
@@ -727,14 +761,14 @@ p {
   text-align: center;
 }
 .image-list img {
-    width: 230px !important;
-    margin: auto;
+  width: 230px !important;
+  margin: auto;
 }
 .image-list .owl-nav .owl-prev .fa {
-    left: 24px;
+  left: 24px;
 }
 .image-list .owl-nav .owl-next .fa {
-    right: 24px;
+  right: 24px;
 }
 .items-image,
 .items-custom-image {
@@ -746,7 +780,8 @@ p {
   display: block !important;
 }
 .items-custom-image img {
-  width: 160px !important;
+  height: 350px;
+  object-fit: cover;
 }
 .custom-image p {
   font-family: "AvertaBold";
@@ -757,8 +792,10 @@ p {
 .custom-image {
   margin: 48px 0 26px;
 }
+.custom-items-all{
+    padding: 0 16px;
+}
 .custom-image-list {
-  padding-left: 16px;
   position: relative;
 }
 .custom-image-list::after {
@@ -766,7 +803,7 @@ p {
   content: "";
   width: 85px;
   height: 91px;
-  right: 0;
+  right: -16px;
   bottom: -60%;
   background: url(../images/feed-item-3.png) no-repeat top right;
 }
@@ -1331,7 +1368,7 @@ input::placeholder {
   bottom: 95px !important;
 }
 .fancybox-content img {
-  width: 100% !important;
+  width: 400px !important;
 }
 /*#endregion */
 
@@ -1359,6 +1396,14 @@ input::placeholder {
   }
   .now-order {
     text-align: right;
+  }
+  .fancybox-content img {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .fancybox-content img {
+    width: 100% !important;
   }
 }
 @media screen and (min-width: 481px) {
