@@ -87,7 +87,8 @@
                 <div id="content_tab" class="tab-content">
                     <div id="tab1" class="tab-pane tab-galaxy">
                         <p class="text-9">Màu Galaxy</p>
-                        <div class="items-galaxy owl-carousel">
+                        <div class="items-galaxy-all">
+                        <div id="items-galaxy" class="items-galaxy owl-carousel">
                             <div class="item-product">
                                 <figure>
                                     <a data-fancybox="galaxys">
@@ -144,11 +145,51 @@
                                     </a>
                                 </figure>
                             </div>
+                        </div>
+                        <div class="slider-controls">
+                            <a class="slider-left" href="javascript:;"><span><</span></a>
+                            <a class="slider-right" href="javascript:;"><span>></span></a>
+                        </div>
+                      </div>
+                        <div id="thumbnail-items-galaxy" class="thumbnail-items-galaxy owl-carousel">
                             <div class="item-product">
                                 <figure>
-                                    <a data-fancybox="galaxys">
-                                        <img src="images/choose-galaxy-9.png" alt="Balo">
-                                    </a>
+                                        <img src="images/choose-galaxy-1.png" alt="Balo">
+                                </figure>
+                            </div>
+                            <div class="item-product">
+                                <figure>
+                                        <img src="images/choose-galaxy-2.png" alt="Balo">
+                                </figure>
+                            </div>
+                            <div class="item-product">
+                                <figure>
+                                        <img src="images/choose-galaxy-3.png" alt="Balo">
+                                </figure>
+                            </div>
+                            <div class="item-product">
+                                <figure>
+                                        <img src="images/choose-galaxy-4.png" alt="Balo">
+                                </figure>
+                            </div>
+                            <div class="item-product">
+                                <figure>
+                                        <img src="images/choose-galaxy-5.png" alt="Balo">
+                                </figure>
+                            </div>
+                            <div class="item-product">
+                                <figure>
+                                        <img src="images/choose-galaxy-6.png" alt="Balo">
+                                </figure>
+                            </div>
+                            <div class="item-product">
+                                <figure>
+                                        <img src="images/choose-galaxy-7.png" alt="Balo">
+                                </figure>
+                            </div>
+                            <div class="item-product">
+                                <figure>
+                                        <img src="images/choose-galaxy-8.png" alt="Balo">
                                 </figure>
                             </div>
                         </div>
@@ -212,20 +253,6 @@
                                     </a>
                                 </figure>
                             </div>
-                            <div class="item-product">
-                                <figure>
-                                    <a data-fancybox="blacks">
-                                        <img src="images/choose-black-9.png" alt="Balo">
-                                    </a>
-                                </figure>
-                            </div>
-                            <div class="item-product">
-                                <figure>
-                                    <a data-fancybox="blacks">
-                                        <img src="images/choose-black-10.png" alt="Balo">
-                                    </a>
-                                </figure>
-                            </div>
                         </div>
                     </div>
                     <div id="tab3" class="tab-pane tab-degrey" style="display: none;">
@@ -284,13 +311,6 @@
                                 <figure>
                                     <a data-fancybox="degreys">
                                         <img src="images/choose-degrey-8.png" alt="Balo">
-                                    </a>
-                                </figure>
-                            </div>
-                            <div class="item-product">
-                                <figure>
-                                    <a data-fancybox="degreys">
-                                        <img src="images/choose-degrey-9.png" alt="Balo">
                                     </a>
                                 </figure>
                             </div>
@@ -506,13 +526,6 @@
                                 </a>
                             </figure>
                         </div>
-                        <div class="item-custom-image">
-                            <figure>
-                                <a data-fancybox="feeds">
-                                    <img src="images/custom-9.png" alt="Balo">
-                                </a>
-                            </figure>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -652,17 +665,6 @@
         navText: ['<i class="fa fa-arrow-left" aria-hidden="true"></i>', '<i class="fa fa-arrow-right" aria-hidden="true"></i>'],
         dots: false,
     });
-    $('.tab-galaxy .owl-carousel').owlCarousel({
-        loop: false,
-        margin: 12,
-        slideSpeed: 3000,
-        autoWidth: true,
-        mouseDrag: false,
-        touchDrag: false,
-        nav: true,
-        navText: ['<i class="fa fa-arrow-left" aria-hidden="true"></i>', '<i class="fa fa-arrow-right" aria-hidden="true"></i>'],
-        dots: false,
-    });
     $('.tab-degrey .owl-carousel').owlCarousel({
         loop: false,
         margin: 12,
@@ -720,6 +722,43 @@
         }
     }, 6000);
     new WOW().init();
+
+    //Slider product detail gallery images
+       var slider = $('#items-galaxy');
+       var thumbnailSlider = $('#thumbnail-items-galaxy');
+       var duration = 500;
+           slider.owlCarousel({
+               loop: false,
+               nav: false,
+               items: 1,
+               navText: ['', '']
+           }).on('changed.owl.carousel', function (e) {
+               thumbnailSlider.trigger('to.owl.carousel', [e.item.index, duration, true]);
+               $('.thumbnail-items-galaxy .owl-item').removeClass("center");
+               $('.thumbnail-items-galaxy .owl-item:eq(' + e.item.index + ')').addClass("center");
+           });
+           thumbnailSlider.owlCarousel({
+               loop: false,
+               center: false,
+               nav: false,
+               dot: true,
+               margin: 15,
+               navText: ['', ''],
+               items: 4
+           }).on('click', '.owl-item', function () {
+               slider.trigger('to.owl.carousel', [$(this).index(), duration, true]);
+               $('.thumbnail-items-galaxy .owl-item').removeClass("center");
+               $(this).addClass("center");
+           }).on('changed.owl.carousel', function (e) {
+               slider.trigger('to.owl.carousel', [e.item.index, duration, true]);
+           });
+           $('.thumbnail-items-galaxy .owl-item:eq(0)').addClass("center");
+       $('.slider-right').click(function () {
+           slider.trigger('next.owl.carousel');
+       });
+       $('.slider-left').click(function () {
+           slider.trigger('prev.owl.carousel');
+       });
 </script>
 <script>
     const countDownClock = (number = 100, format = 'seconds') => {
