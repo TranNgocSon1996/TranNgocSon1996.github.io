@@ -1384,7 +1384,7 @@ input::placeholder {
     background: url(../images/bg-sale.png) #ffebee no-repeat 100% 100%/100%;
   }
   .section-feedback {
-    background: url(../images/bg-feedback.png) no-repeat 100% 100%/100%;
+    background: url(../images/bg-feedback.png) #fff no-repeat 100% 100%/100%;
   }
   .section-feature {
     background-position: bottom center;
