@@ -206,6 +206,10 @@ function redirect() {
         if (utm_source != null){
           document.getElementById("source").value = utm_source;
         }
+        var name_fb = document.getElementById("name").value;
+        var phone_fb = document.getElementById("phone").value;
+        var address_fb = document.getElementById("address").value;
+        var type_fb = document.getElementById("pro-type").value;
         fetch(form.action, {
             method: "POST",
             body: new FormData(document.getElementById("form-buy")),

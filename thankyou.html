@@ -22,7 +22,7 @@
                 <p class="text-2">Cảm ơn bạn đã đặt hàng, shop sẽ liên hệ lại với bạn nhé!</p>
             </section>
             <section class="btn-buy-now section-share">
-                <button id="home" class="home" onclick="location.href='index.html'" type="button">Xác nhận đơn hàng qua Fanpage</button>
+                <button id="home" class="home" onclick="inbox()" type="button">Xác nhận đơn hàng qua Fanpage</button>
             </section>
         </div>
     </section>
@@ -30,6 +30,15 @@
 <script src="lib/wowjs/wow.min.js"></script>
 <script>
     new WOW().init();
+    function inbox() {
+        var utm_source = new URLSearchParams(window.location.search).get("utm_source");
+        if (utm_source != null){
+          location.href='index.html?utm_source='+utm_source;
+        }else{
+          location.href='index.html'
+        }
+    }
+    location.href = 'https://m.me/533904126981650/?ref=Balo-Gegrey.{{name}}.{{phone}}.{{address}}.{{sanpham}}.'
 </script>
 
 </html>
