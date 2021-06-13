@@ -190,7 +190,7 @@ p {
 .btn-buy-now button {
   font-family: "Bungee";
   width: 247px;
-height: 65px;
+  height: 65px;
   background: #013371;
   border-radius: 17px;
   border: navajowhite;
@@ -308,9 +308,9 @@ height: 65px;
 
 /* #region CHOOSE*/
 .section-choose {
-    text-align: center;
-    background: #dcf0ff;
-    padding-bottom: 45px;
+  text-align: center;
+  background: #dcf0ff;
+  padding-bottom: 45px;
 }
 .choose-title {
   display: inline-block;
@@ -400,7 +400,7 @@ height: 65px;
 }
 .items-galaxy,
 .items-black,
-.items-degrey{
+.items-degrey {
   display: inline-block !important;
   width: 100%;
   clear: both;
@@ -792,8 +792,8 @@ height: 65px;
 .custom-image {
   margin: 48px 0 26px;
 }
-.custom-items-all{
-    padding: 0 16px;
+.custom-items-all {
+  padding: 0 16px;
 }
 .custom-image-list {
   position: relative;
@@ -1350,6 +1350,9 @@ input::placeholder {
   text-align: center;
   background: #fff;
   margin: 0;
+}
+.btn-buy-now.section-share button {
+  line-height: 1.5;
 }
 .fancybox-thumbs {
   top: auto !important;

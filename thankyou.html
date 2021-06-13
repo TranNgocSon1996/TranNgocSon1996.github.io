@@ -31,14 +31,24 @@
 <script>
     new WOW().init();
     function inbox() {
-        var utm_source = new URLSearchParams(window.location.search).get("utm_source");
-        if (utm_source != null){
-          location.href='index.html?utm_source='+utm_source;
-        }else{
-          location.href='index.html'
+        var allcookies = document.cookie;
+        cookiearray = allcookies.split(';');
+        for (var i = 0; i < cookiearray.length; i++) {
+            if (cookiearray[i].includes("namefb")) {
+                namefb = cookiearray[i].split('=')[1];
+            }
+            if (cookiearray[i].includes("phonefb")) {
+                phonefb = cookiearray[i].split('=')[1];
+            }
+            if (cookiearray[i].includes("addressfb")) {
+                addressfb = cookiearray[i].split('=')[1];
+            }
+            if (cookiearray[i].includes("typefb")) {
+                typefb = cookiearray[i].split('=')[1];
+            }
         }
+        location.href = 'https://m.me/533904126981650/?ref=Balo-Gegrey.{{' + namefb + '}}.{{' + phonefb + '}}.{{' + addressfb + '}}.{{' + typefb + '}}.';
     }
-    location.href = 'https://m.me/533904126981650/?ref=Balo-Gegrey.{{name}}.{{phone}}.{{address}}.{{sanpham}}.'
 </script>
 
 </html>
