@@ -40,7 +40,7 @@
                     </div>
                     <div class="btn-buy-now infor-booking">
                         <div class="btn-content">
-                            <button onclick="location.href='booking.html'" type="button">ĐẶT MUA NGAY</button>
+                            <button onclick="redirect()" type="button">ĐẶT MUA NGAY</button>
                             <div class="infor-point">
                                 <figure>
                                     <img src="images/finger-point.gif" alt="Point" style="width:66px;height:66px;">
@@ -527,7 +527,7 @@
                 </div>
                 <div class="btn-buy-now sale-booking">
                     <div class="btn-content">
-                        <button onclick="location.href='booking.html'" type="button">ĐẶT MUA NGAY</button>
+                        <button onclick="redirect()" type="button">ĐẶT MUA NGAY</button>
                         <div class="infor-point">
                             <figure>
                                 <img src="images/finger-point.gif" alt="Point" style="width:66px;height:66px;">
@@ -689,7 +689,7 @@
                 </div>
                 <div class="btn-buy-now check-booking">
                     <div class="btn-content">
-                        <button onclick="location.href='booking.html'" type="button">ĐẶT MUA NGAY</button>
+                        <button onclick="redirect()" type="button">ĐẶT MUA NGAY</button>
                         <div class="infor-point">
                             <figure>
                                 <img src="images/finger-point.gif" alt="Point" style="width:66px;height:66px;">
@@ -766,7 +766,7 @@
                 </figure>
             </div>
             <div class="btn-cart">
-                <a href="booking.html">
+                <a onclick="redirect()">
                     <figure>
                         <img src="images/cart-btn.png" alt="">
                     </figure>
@@ -782,6 +782,14 @@
 <script src="lib/wowjs/wow.min.js"></script>
 <script src="lib/fancybox/jquery.fancybox.min.js"></script>
 <script>
+  function redirect() {
+      var utm_source = new URLSearchParams(window.location.search).get("utm_source");
+      if (utm_source != null){
+        location.href='booking.html?utm_source='+utm_source;
+      }else{
+        location.href='booking.html'
+      }
+}
     $('[data-fancybox="galaxys"]').fancybox({
         thumbs: {
             autoStart: true,
