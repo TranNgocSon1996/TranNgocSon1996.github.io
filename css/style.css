@@ -329,7 +329,6 @@ p {
   display: inline-flex;
   border: 0;
   text-align: center;
-  margin: 25px 0;
 }
 .nav-pills-primary li {
   list-style-type: none;
@@ -378,7 +377,7 @@ p {
   font-family: "AvertaBold";
   font-weight: 700;
   text-shadow: 2px 1px 1px #90aaf4;
-  padding: 0 0 30px 0;
+  padding: 30px 0;
 }
 .tab-content .tab-pane p.text-10 {
   color: #494949;
@@ -407,6 +406,9 @@ p {
 }
 .item-product a {
   display: block !important;
+}
+.thumbnail-items-galaxy,.thumbnail-items-black,.thumbnail-items-degrey{
+  display: none !important;
 }
 .thumbnail-items-galaxy .active.center .item-product img,
 .thumbnail-items-black .active.center .item-product img,
