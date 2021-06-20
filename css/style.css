@@ -312,6 +312,10 @@ p {
   background: #dcf0ff;
   padding-bottom: 45px;
 }
+.section-choose .owl-stage {
+    height: 350px !important;
+    overflow: hidden !important;
+}
 .choose-title {
   display: inline-block;
   margin: auto;
