@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lib/wowjs/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NTM235M');</script>
+<!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <section class="body">
+        <div class="container-fuild">
+            <section class="section-msg">
+                <figure>
+                    <img src="images/thankyou.png" alt="">
+                </figure>
+                <p class="text-1">Đặt hàng thành công!</p>
+                <p class="text-2">Cảm ơn bạn đã đặt hàng, shop sẽ liên hệ lại với bạn nhé!</p>
+            </section>
+            <section class="btn-buy-now section-share">
+                <button id="home" class="home" onclick="inbox()" type="button">Xác nhận đơn hàng qua Fanpage</button>
+            </section>
+        </div>
+    </section>
+</body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTM235M"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script src="lib/wowjs/wow.min.js"></script>
+<script>
+    new WOW().init();
+    function inbox() {
+        var allcookies = document.cookie;
+        cookiearray = allcookies.split(';');
+        for (var i = 0; i < cookiearray.length; i++) {
+            if (cookiearray[i].includes("namefb")) {
+                namefb = cookiearray[i].split('=')[1];
+            }
+            if (cookiearray[i].includes("phonefb")) {
+                phonefb = cookiearray[i].split('=')[1];
+            }
+            if (cookiearray[i].includes("addressfb")) {
+                addressfb = cookiearray[i].split('=')[1];
+            }
+            if (cookiearray[i].includes("typefb")) {
+                typefb = cookiearray[i].split('=')[1];
+            }
+        }
+        location.href = 'https://m.me/533904126981650/?ref=Balo-Degrey.' + namefb + '.' + phonefb + '.' + addressfb + '.' + typefb + '.';
+    }
+</script>
+
+</html>
