@@ -62,7 +62,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </section>
             <section class="section-template">
                 <div class="template-text">
-                    <p class="text-6">3 MẪU</p>
+                    <p class="text-6">4 MẪU</p>
                     <p class="text-7">THIẾT KẾ</p>
                 </div>
                 <div class="template-image">
@@ -78,9 +78,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
             </section>
             <section class="section-choose">
-                <div class="choose-title">
-                    <p class="text-8">Lựa chọn màu sắc</p>
-                </div>
                 <div id="content_tab" class="tab-content">
                     <div id="tab1" class="tab-pane tab-galaxy">
                         <p class="text-9">Màu Galaxy</p>
@@ -415,6 +412,108 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                           </div>
                         </div>
                     </div>
+                    <div id="tab4" class="tab-pane tab-cloud" style="display: none;">
+                        <p class="text-30">Đám Mây</p>
+                        <div class="items-cloud-all">
+                        <div id="items-cloud" class="items-cloud owl-carousel">
+                            <div class="item-product">
+                                <figure>
+                                    <a data-fancybox="clouds">
+                                        <img src="images/choose-cloud-1.jpg" alt="Balo">
+                                    </a>
+                                </figure>
+                            </div>
+                            <div class="item-product">
+                                <figure>
+                                    <a data-fancybox="clouds">
+                                        <img src="images/choose-cloud-2.jpg" alt="Balo">
+                                    </a>
+                                </figure>
+                            </div>
+                            <div class="item-product">
+                                <figure>
+                                    <a data-fancybox="clouds">
+                                        <img src="images/choose-cloud-3.jpg" alt="Balo">
+                                    </a>
+                                </figure>
+                            </div>
+                            <div class="item-product">
+                                <figure>
+                                    <a data-fancybox="clouds">
+                                        <img src="images/choose-cloud-4.jpg" alt="Balo">
+                                    </a>
+                                </figure>
+                            </div>
+                            <div class="item-product">
+                                <figure>
+                                    <a data-fancybox="clouds">
+                                        <img src="images/choose-cloud-5.jpg" alt="Balo">
+                                    </a>
+                                </figure>
+                            </div>
+                            <div class="item-product">
+                                <figure>
+                                    <a data-fancybox="clouds">
+                                        <img src="images/choose-cloud-6.jpg" alt="Balo">
+                                    </a>
+                                </figure>
+                            </div>
+                            <div class="item-product">
+                                <figure>
+                                    <a data-fancybox="clouds">
+                                        <img src="images/choose-cloud-7.jpg" alt="Balo">
+                                    </a>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="slider-controls">
+                            <a class="slider-left-4" href="javascript:;"><i class="fa fa-arrow-left"
+                                    aria-hidden="true"></i></a>
+                            <a class="slider-right-4" href="javascript:;"><i class="fa fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                        </div>
+                        <div id="thumbnail-items-cloud" class="thumbnail-items-cloud owl-carousel">
+                          <div class="item-product">
+                              <figure>
+                                      <img src="images/choose-cloud-1.png" alt="Balo">
+                              </figure>
+                          </div>
+                          <div class="item-product">
+                              <figure>
+                                      <img src="images/choose-cloud-2.png" alt="Balo">
+                              </figure>
+                          </div>
+                          <div class="item-product">
+                              <figure>
+                                      <img src="images/choose-cloud-3.png" alt="Balo">
+                              </figure>
+                          </div>
+                          <div class="item-product">
+                              <figure>
+                                      <img src="images/choose-cloud-4.png" alt="Balo">
+                              </figure>
+                          </div>
+                          <div class="item-product">
+                              <figure>
+                                      <img src="images/choose-cloud-5.png" alt="Balo">
+                              </figure>
+                          </div>
+                          <div class="item-product">
+                              <figure>
+                                      <img src="images/choose-cloud-6.png" alt="Balo">
+                              </figure>
+                          </div>
+                          <div class="item-product">
+                              <figure>
+                                      <img src="images/choose-cloud-7.png" alt="Balo">
+                              </figure>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="choose-title">
+                    <p class="text-8">Lựa chọn màu sắc</p>
                 </div>
                 <div class="nav-align-center">
                     <ul class="nav nav-pills nav-pills-primary choose-color">
@@ -424,6 +523,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 class="btn-black" type="button">Black</button></li>
                         <li id="li_tab3" class="nav-item" onclick="tab('tab3')"><button id="btn-degrey btn-tab3"
                                 class="btn-degrey" type="button">Degrey Letter</button></li>
+                        <li id="li_tab4" class="nav-item" onclick="tab('tab4')"><button id="btn-cloud btn-tab4"
+                                class="btn-cloud" type="button">Đám Mây</button></li>
                     </ul>
                 </div>
             </section>
@@ -819,6 +920,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             axis: 'x'
         }
     });
+    $('[data-fancybox="clouds"]').fancybox({
+        thumbs: {
+            autoStart: true,
+            axis: 'x'
+        }
+    });
     $('[data-fancybox="feeds"]').fancybox({
         thumbs: {
             autoStart: true,
@@ -841,9 +948,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         document.getElementById('tab1').style.display = 'none';
         document.getElementById('tab2').style.display = 'none';
         document.getElementById('tab3').style.display = 'none';
+        document.getElementById('tab4').style.display = 'none';
         document.getElementById('li_tab1').setAttribute('class', "");
         document.getElementById('li_tab2').setAttribute('class', "");
         document.getElementById('li_tab3').setAttribute('class', "");
+        document.getElementById('li_tab4').setAttribute('class', "");
         document.getElementById(tab).style.display = 'block';
         document.getElementById('li_' + tab).setAttribute('class', 'select-tab');
     }
@@ -1021,6 +1130,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     $('.slider-left-3').click(function () {
         slider3.trigger('prev.owl.carousel');
+    });
+
+    var slider4 = $('.items-cloud');
+    var thumbnailSlider4 = $('.thumbnail-items-cloud');
+    slider4.owlCarousel({
+        loop: false,
+        nav: false,
+        dots: false,
+        mouseDrag: false,
+        touchDrag: false,
+        items: 1,
+        navText: ['', '']
+    }).on('changed.owl.carousel', function (e) {
+        thumbnailSlider4.trigger('to.owl.carousel', [e.item.index, duration, true]);
+        $('.thumbnail-items-cloud .owl-item').removeClass("center");
+        $('.thumbnail-items-cloud .owl-item:eq(' + e.item.index + ')').addClass("center");
+    });
+    thumbnailSlider4.owlCarousel({
+        loop: false,
+        center: false,
+        nav: false,
+        dot: false,
+        mouseDrag: false,
+        touchDrag: false,
+        margin: 8,
+        navText: ['', ''],
+        items: 4
+    }).on('click', '.owl-item', function () {
+        slider4.trigger('to.owl.carousel', [$(this).index(), duration, true]);
+        $('.thumbnail-items-cloud .owl-item').removeClass("center");
+        $(this).addClass("center");
+    }).on('changed.owl.carousel', function (e) {
+        slider4.trigger('to.owl.carousel', [e.item.index, duration, true]);
+    });
+    $('.thumbnail-items-cloud .owl-item:eq(0)').addClass("center");
+    $('.slider-right-4').click(function () {
+        slider4.trigger('next.owl.carousel');
+    });
+    $('.slider-left-4').click(function () {
+        slider4.trigger('prev.owl.carousel');
     });
 </script>
 <script>

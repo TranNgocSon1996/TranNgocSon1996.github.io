@@ -49,6 +49,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <button id="btn-galaxy" class="btn btn-galaxy active" type="button">Galaxy</button>
                         <button id="btn-black" class="btn btn-black" type="button">Black</button>
                         <button id="btn-degrey" class="btn btn-degrey" type="button">Degrey Letter</button>
+                        <button id="btn-cloud" class="btn btn-cloud" type="button">Đám Mây</button>
                     </div>
                     <div class="number mo-grid">
                         <div class="number-text">
@@ -200,6 +201,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         } else {
             $('.btn-degrey').addClass('active');
             document.getElementById("pro-type").value = (type + " Degrey Letter ");
+        }
+    });
+    $(".btn-cloud").click(function () {
+        var check = $('.active').length
+        var cloud = document.querySelector('.btn-cloud').classList.contains('active')
+        var type = document.getElementById("pro-type").value;
+        if (cloud) {
+            if (check > 1) {
+                $('.btn-cloud').removeClass('active');
+                document.getElementById("pro-type").value = type.replace(" Đám Mây ", "");
+            }
+        } else {
+            $('.btn-cloud').addClass('active');
+            document.getElementById("pro-type").value = (type + " Đám Mây ");
         }
     });
     var today = new Date();
