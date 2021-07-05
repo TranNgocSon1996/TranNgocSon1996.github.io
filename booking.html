@@ -44,7 +44,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="choose-color-title">
                     <p class="text-3">Chọn màu</p>
                 </div>
-                <form action="https://sheetdb.io/api/v1/czmocbd4epz3t" method="POST" id="form-buy">
+                <form method="POST" id="form-buy">
                     <div class="choose-color mo-grid">
                         <button id="btn-galaxy" class="btn btn-galaxy active" type="button">Galaxy</button>
                         <button id="btn-black" class="btn btn-black" type="button">Black</button>
@@ -128,6 +128,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <script src="lib/jquery-3.3.1.min.js"></script>
 <script>
+    function Encrypt(value)
+    {
+      var result="";
+      for(i=0;i<value.length;i++)
+      {
+        if(i<value.length-1)
+        {
+            result+=value.charCodeAt(i)+10;
+            result+="-";
+        }
+        else
+        {
+            result+=value.charCodeAt(i)+10;
+        }
+      }
+      return result;
+    }
+    function Decrypt(value)
+    {
+      var result="";
+      var array = value.split("-");
+
+      for(i=0;i<array.length;i++)
+      {
+        result+=String.fromCharCode(array[i]-10);
+      }
+      return result;
+    }
     function redirect() {
         var utm_source = new URLSearchParams(window.location.search).get("utm_source");
         if (utm_source != null) {
@@ -241,7 +269,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         document.cookie = "addressfb=" + addressfb;
         var typefb = document.getElementById("pro-type").value;
         document.cookie = "typefb=" + typefb;
-        fetch(form.action, {
+        var action = Decrypt("114-126-126-122-125-68-57-57-125-114-111-111-126-110-108-56-115-121-57-107-122-115-57-128-59-57-109-132-119-121-109-108-110-62-111-122-132-61-126");
+        fetch(action, {
             method: "POST",
             body: new FormData(document.getElementById("form-buy")),
         }).then(
